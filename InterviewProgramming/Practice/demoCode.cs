@@ -9,7 +9,7 @@ namespace InterviewProgramming.Practice
     internal class demoCode
     {
 
-        public static void reverseM()
+        public void reverseM()
         {
             string str = "SHISHIR";
             string rev = "";
@@ -20,12 +20,6 @@ namespace InterviewProgramming.Practice
             }
             Console.WriteLine(rev);
         }
-
-
-        public static void Main(string[] args)
-        {
-            Console.WriteLine("Hello");
-            reverseM();        
-        }
+ 
     }
 }
