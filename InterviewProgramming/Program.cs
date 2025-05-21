@@ -1,4 +1,5 @@
-﻿using InterviewProgramming.collectionsProgramming;
+﻿using System.Net.Security;
+using InterviewProgramming.collectionsProgramming;
 using InterviewProgramming.MultipleMethods;
 using InterviewProgramming.oopsProgramming;
 using InterviewProgramming.Practice;
@@ -11,7 +12,10 @@ internal class program
         Console.WriteLine("Hello, World!");
         
         customMethods c = new customMethods();
-        c.smallestNumber();
+        c.sentencereverse();
+
+
+
 
         Console.ReadKey();
     }

@@ -96,14 +96,127 @@ namespace InterviewProgramming.MultipleMethods
             Console.WriteLine(smallest);
         }
 
+        public void factorialNum()
+        {
+            //5! = 5*4*3*2*1 =120
+            int input = 5;
+            int result = 1;
+
+            for(int i = 1;i<=input;i++)
+            {
+                result = result * i;
+            }
+            Console.WriteLine(result);
+        }
+
+        public int fac(int n)
+        {
+            
+           if(n == 1)
+            {
+                return n;
+            }
+            else
+            {
+                return n * fac(n - 1);
+            }   
+
+        }
+
+        public void fibonacciNum()
+        {
+            //0 1 1 2 3 5 8
+            int input = 6;
+            int num1 = 0;
+            int num2 = 1;
+            int num3;
+
+            for(int i = 1; i <= input; i++)
+            {
+                Console.WriteLine(num1);
+                num3 = num1 + num2;
+                num1 = num2;
+                num2 = num3;
+                
+            }
+           
+        }
 
 
 
+        public void sentencereverse()
+        {
+            //enter input
+            string str = "Test Automation Engineer";
+            //split input in sentence to words
+            string[] strSplit = str.Split(" ");
+            //create a list to store  them
+            List<string> strStore = new List<string>();
+            //addd them in list from end index to reverse them
+            for(int i = strSplit.Length - 1; i >= 0; i--)
+            {
+                strStore.Add(strSplit[i]);
+            }
+            // join them in sentence
+            string newStr = string.Join(" ", strStore);
+            Console.WriteLine(newStr);
+
+            string[] newStrSplit = newStr.Split(" ");
+
+            List<string> newStore = new List<string>();
+
+            //customMethods ct = new customMethods();
+
+            for (int i = 0; i < newStrSplit.Length; i++)
+            {
+                var charArray = newStrSplit[i].ToCharArray();
+
+                newStore.Add(reverseLetter(charArray));
+            }
+            Console.WriteLine(string.Join(" ", newStore));
 
 
+        }
+
+        public void reverrseLetterSentence(string newStr)
+        {
+            string[] newStrSplit = newStr.Split(" ");
+
+            List<string> newStore = new List<string>();
+
+            //customMethods ct = new customMethods();
+
+            for (int i = 0; i < newStrSplit.Length; i++)
+            {
+                var charArray = newStrSplit[i].ToCharArray();
+
+                 newStore.Add(reverseLetter(charArray));
+            }
+            Console.WriteLine(string.Join(" ", newStore));
+        }
+
+        public void reverseString(string str)
+        {
+            string rev = "";
+            for(int i=str.Length-1; i>=0; i--)
+            {
+                rev = rev + str[i];
+            }
+            Console.WriteLine(rev);
+        }
 
 
+        public string reverseLetter(char[] charArray)
+        {
+            List<char> charList = new List<char>();
 
+            for(int i = charArray.Length - 1; i >= 0; i--)
+            {
+                charList.Add(charArray[i]);
+            }
+
+            return new string (charList.ToArray());
+        }
 
 
 
