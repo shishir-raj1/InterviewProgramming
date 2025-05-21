@@ -12,7 +12,7 @@ internal class program
         Console.WriteLine("Hello, World!");
         
         customMethods c = new customMethods();
-        c.sentencereverse();
+        c.occurance();
 
 
 

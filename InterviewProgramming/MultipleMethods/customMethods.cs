@@ -146,18 +146,15 @@ namespace InterviewProgramming.MultipleMethods
 
         public void sentencereverse()
         {
-            //enter input
             string str = "Test Automation Engineer";
-            //split input in sentence to words
             string[] strSplit = str.Split(" ");
-            //create a list to store  them
+
             List<string> strStore = new List<string>();
-            //addd them in list from end index to reverse them
+
             for(int i = strSplit.Length - 1; i >= 0; i--)
             {
                 strStore.Add(strSplit[i]);
             }
-            // join them in sentence
             string newStr = string.Join(" ", strStore);
             Console.WriteLine(newStr);
 
@@ -165,16 +162,12 @@ namespace InterviewProgramming.MultipleMethods
 
             List<string> newStore = new List<string>();
 
-            //customMethods ct = new customMethods();
-
             for (int i = 0; i < newStrSplit.Length; i++)
             {
                 var charArray = newStrSplit[i].ToCharArray();
-
                 newStore.Add(reverseLetter(charArray));
             }
             Console.WriteLine(string.Join(" ", newStore));
-
 
         }
 
@@ -183,8 +176,6 @@ namespace InterviewProgramming.MultipleMethods
             string[] newStrSplit = newStr.Split(" ");
 
             List<string> newStore = new List<string>();
-
-            //customMethods ct = new customMethods();
 
             for (int i = 0; i < newStrSplit.Length; i++)
             {
@@ -218,7 +209,71 @@ namespace InterviewProgramming.MultipleMethods
             return new string (charList.ToArray());
         }
 
+        public void reverseNum(int num)
+        {
+            int digit;
+            int rev = 0;
 
+            while (num > 0)
+            {
+                digit = num % 10;
+                rev = rev*10 + digit;
+                num = num / 10;
+            }
+
+            Console.WriteLine(rev);
+
+        }
+
+        public void sum(int num)
+        {
+            int digit;
+            int sum = 0;
+
+            while (num > 0)
+            {
+                digit = num % 10;
+                sum = sum + digit;
+                num = num / 10;
+            }
+            Console.WriteLine(sum);
+        }
+
+        public void sumNatural()
+        {
+            int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            int sum = 0;
+
+            for(int i = 0; i < arr.Length; i++)
+            {
+                sum = sum + arr[i];
+            }
+            Console.WriteLine(sum);
+        }
+
+        public void occurance()
+        {
+            string str = "SHISHIR";
+
+            var store = new Dictionary<char,int>();
+
+            foreach(char c in str)
+            {
+                if (store.ContainsKey(c))
+                {
+                    store[c]++;
+                }
+                else
+                {
+                    store[c] = 1;
+                }
+            }
+
+            foreach(var s in store)
+            {
+                Console.WriteLine($"character = {s.Key}, count = {s.Value}");
+            }
+        }
 
 
 
