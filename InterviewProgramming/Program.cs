@@ -11,7 +11,7 @@ internal class program
         Console.WriteLine("Hello, World!");
         
         customMethods c = new customMethods();
-        c.freqCount();
+        c.smallestNumber();
 
         Console.ReadKey();
     }
