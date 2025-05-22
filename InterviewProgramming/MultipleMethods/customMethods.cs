@@ -273,9 +273,47 @@ namespace InterviewProgramming.MultipleMethods
             {
                 Console.WriteLine($"character = {s.Key}, count = {s.Value}");
             }
+
+            Console.WriteLine("remove occurance and print");
+
+            foreach(char o in str)
+            {
+                if (store[o] == 1)
+                {
+                    Console.WriteLine(o);
+                }
+            }
+
+            var rstring = new HashSet<char>();
+            Console.WriteLine("String after removing duplicates");
+
+            foreach (var rstr in str)
+            {
+                if (!rstring.Contains(rstr))
+                {
+                    Console.WriteLine(rstr + " ");
+                    rstring.Add(rstr);
+                }
+            }
+
+
         }
 
+        public void removeOccurance()
+        {
+            string str = "SHISHIR";
 
+            var reOccur = new HashSet<char>();
+
+            foreach (var c in str)
+            {
+                if (!reOccur.Contains(c))
+                {
+                    Console.WriteLine(c);
+                    reOccur.Add(c);
+                }
+            }
+        }
 
 
 
