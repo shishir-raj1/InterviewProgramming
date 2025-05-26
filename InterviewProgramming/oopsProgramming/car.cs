@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InterviewProgramming.oopsProgramming
 {
-    internal class car
+    public class car
     {
         //member variable, private hides the variable from other classes
         private string _model = "";

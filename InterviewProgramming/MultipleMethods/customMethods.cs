@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -315,52 +316,107 @@ namespace InterviewProgramming.MultipleMethods
             }
         }
 
+        public void splitWords()
+        {
+            string str = "My name is Shishir";
+
+            string[] wordSplit = str.Split(" ");
+
+            List<string> words = new List<string>();
+
+            for(int i=wordSplit.Length-1; i >= 0; i--)
+            {
+                words.Add(wordSplit[i]);
+            }
+
+            string wordsJoin = string.Join(" ", words);
+            Console.WriteLine(wordsJoin);
+
+            List<string> reverseWords = new List<string>();
+            string rev;
+
+            for (int i=0;i < words.Count; i++)
+            {
+                //reverseString(words[i]);
+               // reverseWords.Add(words[i]);
+               
+            }
+
+             string reverseJoin = string.Join(" ", reverseWords);
+            Console.WriteLine(reverseJoin);
+            
+        }
 
 
+        public void RemDup()
+        {
+            int[] arr = { 1, 2, 3, 2, 1 };
+
+            HashSet<int> set = new HashSet<int>();
+
+            List<int> list = new List<int>();
+
+            foreach (int i in arr)
+            {
+                set.Add(i);
+            }
+
+            string setJoin = string.Join(" ", set);
+            Console.WriteLine(setJoin);
+
+            foreach (int i in set)
+            {
+                list.Add(i);
+                
+            }
+
+            string listJoin = string.Join(" ", list);
+            Console.WriteLine(listJoin);
+            
+
+        }
 
 
+        public void fchar()
+        {
+            string str = "shishir";
+            int index = str.IndexOf("i");
+            int count = 0;
 
+            for (int i = index +1; i < str.Length; i++)
+            {
+                if (str[i] == 'i')
+                {
+                    count++;
+                }
+            }
+            Console.WriteLine("Number of i = " +count);
+        }
 
+        public void sArray()
+        {
+            int[] arr = { 1, 2, 5, 7, 2, 9, 23, 45, 2 };
 
+            for(int i = 0; i < arr.Length-1; i++)
+            {
+                for(int j = 0; j < arr.Length-1; j++)
+                {
+                    if (arr[j] > arr[j + 1])
+                    {
+                        int temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+                
+            }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            foreach(int i in arr)
+            {
+                Console.Write(i + " ");
+            }
+            
+        }
 
         public void freqCount()
         {
@@ -445,6 +501,35 @@ namespace InterviewProgramming.MultipleMethods
                 }
             }
         }
+
+
+        public void toggleCharacter(string str)
+        {
+            //input = sHishiR
+            //output = ShISHIr
+            char[] ch = str.ToCharArray();
+            string result = " ";
+
+            foreach (char i in ch)
+            {
+                if (char.IsUpper(i))
+                {
+                    result = result + char.ToLower(i);
+                }
+                else if (char.IsLower(i)) {
+                    
+                     result = result + char.ToUpper(i);
+                }else
+                {
+                     result = result + i;
+                }
+
+                
+            }
+            Console.WriteLine(result);
+            
+        }
+
 
     }
 }
