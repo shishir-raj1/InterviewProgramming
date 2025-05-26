@@ -530,6 +530,59 @@ namespace InterviewProgramming.MultipleMethods
             
         }
 
+        public void OccuranceOfDigit()
+        {
+
+            //input = 8378391113344; 
+            //digit 1 repeated 3 times
+
+            Console.WriteLine("Enter a Number");
+            int number = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter a digit you want to check");
+            int digit = int.Parse(Console.ReadLine());
+
+            int count = 0;
+
+            while(number > 0)
+            {
+                if (number%10 == digit)
+                {
+                    count++;
+                }
+                 
+                 number = number / 10;
+            }
+            Console.WriteLine(count);
+
+            Console.WriteLine("Digit " +digit +"occurs " +count +"times");
+
+        }
+
+        //input = {1,2,1,5,3,2,1,2,4}
+        //output = largest number = and the index = 5 and index is 3
+
+        public void findIndex()
+        {
+            int[] num = { 1, 2, 1, 5, 3, 2, 1, 2, 4 };
+
+            int largest = num[0];
+            int index = 0;
+
+            for(int i = 1;i < num.Length;i++)
+            {
+                if (num[i] > largest)
+                {
+                    largest = num[i];
+                    index = i;
+                }
+            }
+            Console.WriteLine("Largest number " +largest);
+            Console.WriteLine("Index of Largest number " + index);
+
+        }
+
+
 
     }
 }

@@ -11,12 +11,12 @@ internal class program
     {
         // See https://aka.ms/new-console-template for more information
        
-        Console.WriteLine("Enter your Input");
-        var input = Console.ReadLine();
+       // Console.WriteLine("Enter your Input");
+       // var input = Console.ReadLine();
 
         customMethods c = new customMethods();
-        
-        c.toggleCharacter(input);
+
+        c.findIndex();
 
 
 
