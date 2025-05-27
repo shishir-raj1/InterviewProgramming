@@ -16,7 +16,7 @@ internal class program
 
         customMethods c = new customMethods();
 
-        c.findIndex();
+        c.adjacentchar();
 
 
 

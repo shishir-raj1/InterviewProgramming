@@ -582,7 +582,63 @@ namespace InterviewProgramming.MultipleMethods
 
         }
 
+        public void wordOccurance()
+        {
+            string str = "SHISHIR";
 
+            var dict = new Dictionary<char, int>();
+
+            foreach (char c in str)
+            {
+                if (dict.ContainsKey(c))
+                {
+                    dict[c]++;
+                }
+                else
+                {
+                    dict[c] = 1;
+                }
+            }
+
+            foreach (var i in dict)
+            {
+                Console.WriteLine($"character = {i.Key} count is {i.Value} ");
+            }
+        }
+
+        public void adjacentchar()
+        {
+            string str = "SHISHIR";
+            char[] charArray = str.ToCharArray();
+
+            //reverse character out= HSSIIHR
+
+
+            for (int i = 0; i < str.Length - 1; i=i + 2)
+            {
+                var temp = charArray[i]; // temp= s
+                charArray[i] = charArray[i + 1];// 0=H
+                charArray[i + 1] = temp; // 1=s
+
+            }
+             
+            string s = string.Concat(charArray);
+
+            string newStr = string.Join(" ", s );
+            Console.WriteLine(newStr);
+        }
+
+        public void reverse(string str)
+        {
+            string rev = "";
+            for (int i = str.Length - 1; i > 0; i--)
+            {
+                rev = rev + str[i];
+            }
+            Console.WriteLine(rev);
+        }
 
     }
+
 }
+
