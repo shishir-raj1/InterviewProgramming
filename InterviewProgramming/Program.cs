@@ -17,6 +17,7 @@ internal class program
         customMethods c = new customMethods();
 
         c.adjacentchar();
+        c.stringWordCount();
 
 
 

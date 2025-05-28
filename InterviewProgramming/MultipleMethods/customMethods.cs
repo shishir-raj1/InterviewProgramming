@@ -638,6 +638,38 @@ namespace InterviewProgramming.MultipleMethods
             Console.WriteLine(rev);
         }
 
+        public void stringWordCount()
+        {
+            string str = "This this is is done by Saket Saket";
+
+            string[] strSplit = str.ToUpper().Split(" ");
+
+
+            Console.WriteLine("count the words : " + strSplit.Length);
+
+            var dict = new Dictionary<string, int>();
+
+            
+
+            foreach (var s in strSplit)
+            {
+                if (dict.ContainsKey(s))
+                {
+                    dict[s]++;
+                }
+                else
+                {
+                    dict[s] = 1;
+                }
+            }
+
+            foreach (var c in dict)
+            {
+                Console.WriteLine($"words = {c.Key} and the count is {c.Value}");
+            }
+
+        }
+
     }
 
 }
