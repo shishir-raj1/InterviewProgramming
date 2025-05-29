@@ -19,6 +19,9 @@ internal class program
         c.adjacentchar();
         c.stringWordCount();
 
+        qualityTest q = new qualityTest();
+        q.sentenceReverse();
+
 
 
         Console.ReadKey();
