@@ -16,11 +16,8 @@ internal class program
 
         customMethods c = new customMethods();
 
-        c.adjacentchar();
-        c.stringWordCount();
-
-        qualityTest q = new qualityTest();
-        q.sentenceReverse();
+        stringQuestions sq = new stringQuestions();
+        sq.changeString();
 
 
 
